@@ -34,6 +34,30 @@ yarn-error.log
 testem.log
 /typings
 
+# Environment and local secrets (never commit real keys)
+.env
+.env.*
+
+# Certificates / keys
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*_rsa
+*_ed25519
+*.keystore
+
+# Capacitor / native (when you add platforms)
+**/android/.gradle
+**/android/app/build
+**/android/captures
+**/android/local.properties
+**/ios/Pods
+**/ios/**/*.xcuserdata
+**/ios/**/DerivedData
+
 # System Files
 .DS_Store
 Thumbs.db
