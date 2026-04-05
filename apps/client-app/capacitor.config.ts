@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.nexo.user',
-  appName: 'Nexo User',
-  webDir: '../../dist/apps/user-app/browser',
+  appId: 'com.nexo.client',
+  appName: 'Nexo Client',
+  webDir: '../../dist/apps/client-app/browser',
 };
 
 export default config;

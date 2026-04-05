@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:user": "nx serve user-app",
+    "start:client": "nx serve client-app",
     "start:admin": "nx serve admin-app",
     "start:api": "nx serve api",
     "start:api:3333": "cross-env PORT=3333 nx serve api",
-    "start-all": "nx run-many -t serve --projects=user-app,admin-app,api --parallel=3 --output-style=stream",
-    "build:user": "nx build user-app",
+    "start-all": "nx run-many -t serve --projects=client-app,admin-app,api --parallel=3 --output-style=stream",
+    "build:client": "nx build client-app",
     "build:admin": "nx build admin-app",
     "build:api": "nx build api",
-    "build:all": "nx run-many -t build --projects=user-app,admin-app,api",
-    "cap:sync:user": "nx build user-app && cd apps/user-app && npx cap sync"
+    "build:all": "nx run-many -t build --projects=client-app,admin-app,api",
+    "cap:sync:client": "nx build client-app && cd apps/client-app && npx cap sync"
   },
   "private": true,
   "dependencies": {

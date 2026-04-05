@@ -11,6 +11,6 @@ import { canAccessAdminApp } from '@nexo/shared-auth';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = 'user-app';
+  protected readonly title = 'client-app';
   protected readonly vendorCanOpenAdmin = canAccessAdminApp('vendor');
 }

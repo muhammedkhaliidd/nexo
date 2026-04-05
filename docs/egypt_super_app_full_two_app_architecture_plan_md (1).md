@@ -5,29 +5,29 @@
 The project consists of two separate applications:
 
 1. Admin App
-2. User App
+2. Client App
 
 The same account can access both applications, depending on the assigned role:
 - Admin
 - Vendor / Service Provider
-- Normal User
+- Normal Client
 
 ---
 
-# 1. User Roles
+# 1. Roles
 
 ```text
-User
-├── Normal User
+Account
+├── Normal Client
 ├── Vendor / Service Provider
 └── Admin
 ```
 
 ### Permissions
 
-| Role | User App | Admin App |
-|------|-----------|------------|
-| Normal User | Yes | No |
+| Role | Client App | Admin App |
+|------|-----------|-----------|
+| Normal Client | Yes | No |
 | Vendor | Yes | Yes (limited access) |
 | Admin | Yes | Yes (full access) |
 
@@ -35,14 +35,14 @@ User
 
 # 2. Applications
 
-## A) User App
+## A) Client App
 
 The application used by the end customer.
 
 ### Main Modules
 
 ```text
-User App
+Client App
 ├── Home
 ├── Booking
 ├── Home Services
@@ -58,12 +58,12 @@ User App
 
 ## B) Admin App
 
-The application that controls all data and settings used by the User App.
+The application that controls all data and settings used by the Client App.
 
 ```text
 Admin App
 ├── Dashboard
-├── Users Management
+├── Clients Management
 ├── Vendors Management
 ├── Categories Management
 ├── Booking Management
@@ -81,7 +81,7 @@ Admin App
 
 # 3. Booking Module with Optional Order
 
-The user can book anything such as:
+The client can book anything such as:
 - Restaurant
 - Cafe
 - Barber
@@ -96,9 +96,9 @@ Would you like to place an order?
 [ Yes ] [ No ]
 ```
 
-If the user selects Yes:
+If the client selects Yes:
 - Show the menu or products linked to the selected place
-- Allow the user to choose products
+- Allow the client to choose products
 - Save the order together with the booking
 
 Example:
@@ -210,7 +210,7 @@ The vendor can:
 The vendor cannot:
 - View other vendors
 - Control global app settings
-- Manage users
+- Manage clients
 
 ```text
 Vendor Panel
@@ -250,7 +250,7 @@ Location
 
 ```text
 Booking
-├── userId
+├── clientId
 ├── locationId
 ├── date
 ├── time
@@ -269,7 +269,7 @@ Order
 
 ---
 
-# 8. Suggested Screens – User App
+# 8. Suggested Screens – Client App
 
 ```text
 Home
@@ -311,7 +311,7 @@ Dashboard
 
 ```text
 Management
-├── Users
+├── Clients
 ├── Vendors
 ├── Categories
 ├── Locations
@@ -355,14 +355,14 @@ Admin Features
 
 ```text
 Frontend
-├── User App (Angular + Ionic)
+├── Client App (Angular + Capacitor)
 └── Admin App (Angular)
 ```
 
 ```text
 Backend
 ├── Auth Service
-├── Users Service
+├── Clients Service
 ├── Booking Service
 ├── Products Service
 ├── Locations Service
@@ -372,7 +372,7 @@ Backend
 
 ```text
 Database
-├── Users
+├── Clients
 ├── Roles
 ├── Vendors
 ├── Locations
@@ -397,7 +397,7 @@ Later, you can add:
 - Community
 
 All of them will reuse the same:
-- Users
+- Client accounts
 - Booking Engine
 - Products
 - Orders
@@ -415,7 +415,7 @@ All of them will reuse the same:
                      ┌─────────────┴─────────────┐
                      │                           │
               ┌──────▼───────┐           ┌───────▼───────┐
-              │   User App   │           │   Admin App   │
+              │  Client App │           │   Admin App   │
               └──────┬───────┘           └───────┬───────┘
                      │                           │
          ┌───────────┼────────────┐      ┌───────┼─────────────────┐
@@ -431,7 +431,7 @@ All of them will reuse the same:
          └─────────────┴───────────┴──────┴───────┴────────────────┘
                                    │
                                    ▼
-                       Data is reflected in User App
+                       Data is reflected in Client App
 ```
 
 ---
@@ -523,4 +523,3 @@ Admin / Vendor
 │ Publish / Active│
 └─────────────────┘
 ```
-

@@ -1,8 +1,8 @@
 module.exports = {
-  displayName: 'user-app',
+  displayName: 'client-app',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/user-app',
+  coverageDirectory: '../../coverage/apps/client-app',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
