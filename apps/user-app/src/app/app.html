@@ -1,0 +1,13 @@
+<div class="min-h-screen bg-slate-50 p-6 dark:bg-slate-950">
+  <nexo-panel title="Nexo — User app">
+    <p class="mb-2 text-sm">
+      Angular SSR, Tailwind, PrimeNG, and shared workspace libraries are wired.
+    </p>
+    <p class="mb-4 text-sm">
+      Example: vendor role can access Admin app:
+      <span class="font-semibold">{{ vendorCanOpenAdmin ? 'yes' : 'no' }}</span>
+    </p>
+    <p-button label="Continue" />
+  </nexo-panel>
+  <router-outlet />
+</div>
